@@ -1,0 +1,13 @@
+pandas
+numpy
+nltk
+spacy
+pysrt
+textstat
+scikit-learn
+catboost
+tensorflow
+tensorflow_hub
+tensorflow_text
+torch
+streamlit
