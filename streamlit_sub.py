@@ -51,13 +51,20 @@ def download_and_extract_model(model_url, model_dir='model'):
     # Download the model .tar.gz file
     response = requests.get(model_url, stream=True)
     tar_gz_path = os.path.join(tempfile.gettempdir(), 'model.tar.gz')
+    if os.path.exists(tar_gz_path):
+        print(f"File exists at {tar_gz_path}")
+    else:
+        print(f"No file found at {tar_gz_path}")
     with open(tar_gz_path, 'wb') as f:
         for chunk in response.iter_content(chunk_size=8192):
             if chunk:  # filter out keep-alive new chunks
                 f.write(chunk)
 
     print(f"Model downloaded to {tar_gz_path}")
-
+    if os.path.exists(tar_gz_path):
+        print(f"File exists at {tar_gz_path}")
+    else:
+    print(f"No file found at {tar_gz_path}")
     # Extract the model files
     with tarfile.open(tar_gz_path, 'r:gz') as tar:
         tar.extractall(path=model_dir)
