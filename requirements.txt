@@ -14,5 +14,5 @@ torch
 streamlit
 requests
 tensorflow_hub
-tempfile
+
 
