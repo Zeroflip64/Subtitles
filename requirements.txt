@@ -13,7 +13,6 @@ tensorflow_text
 torch
 streamlit
 requests
-os
 zipfile
 tensorflow_hub
 tempfile
