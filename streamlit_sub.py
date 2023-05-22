@@ -36,7 +36,36 @@ from textstat import flesch_kincaid_grade, gunning_fog, smog_index
 import torch
 from sklearn.decomposition import PCA
 import streamlit as st
+import requests
+import os
+import zipfile
+import tensorflow_hub as hub
+import tempfile
+
 nlp = spacy.load("en_core_web_sm")
+
+def download_and_extract_model(model_url, model_dir='model'):
+    
+    os.makedirs(model_dir, exist_ok=True)
+    
+    
+    response = requests.get(model_url)
+    zip_path = os.path.join(tempfile.gettempdir(), 'model.zip')
+    with open(zip_path, 'wb') as f:
+        f.write(response.content)
+
+    
+    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+        zip_ref.extractall(model_dir)
+
+model_url = 'https://drive.google.com/file/d/1DIi2CgTSwz1I8bXJNVCxc9Vfo0x_uIXX/view?usp=share_link'  
+
+
+download_and_extract_model(model_url)
+
+
+model = hub.load('model')
+
 
 language=['RUS','ENG']
 selected_len = st.multiselect('Язык/Lsnguage ?', language)
@@ -163,8 +192,7 @@ if 'RUS' in selected_len:
   predict_data=pd.DataFrame()
   predict_data[[['subs','avg_sent_length','avg_word_length','lexical_diversity','flesch_kincaid','gunning','smog','time','difficult_words']]]=None
 
-  module_url = "https://tfhub.dev/google/universal-sentence-encoder/4"
-  model = hub.load(module_url)
+
 
 
 
@@ -440,8 +468,7 @@ if 'ENG' in selected_len:
   predict_data=pd.DataFrame()
   predict_data[[['subs','avg_sent_length','avg_word_length','lexical_diversity','flesch_kincaid','gunning','smog','time','difficult_words']]]=None
 
-  module_url = "https://tfhub.dev/google/universal-sentence-encoder/4"
-  model = hub.load(module_url)
+
 
 
 
