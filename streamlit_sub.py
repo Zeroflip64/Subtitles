@@ -46,8 +46,8 @@ nlp = spacy.load("en_core_web_sm")
 
 
 
-  module_url = "https://drive.google.com/file/d/1DIi2CgTSwz1I8bXJNVCxc9Vfo0x_uIXX/view?usp=share_link"
-  model = hub.load(module_url)
+module_url = "https://drive.google.com/file/d/1DIi2CgTSwz1I8bXJNVCxc9Vfo0x_uIXX/view?usp=share_link"
+model = hub.load(module_url)
 
 language=['RUS','ENG']
 selected_len = st.multiselect('Язык/Lsnguage ?', language)
