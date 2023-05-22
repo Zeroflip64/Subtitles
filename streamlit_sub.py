@@ -45,23 +45,26 @@ import tempfile
 nlp = spacy.load("en_core_web_sm")
 
 def download_and_extract_model(model_url, model_dir='model'):
-    
+    # Create temporary directory
     os.makedirs(model_dir, exist_ok=True)
     
     
-    response = requests.get(model_url)
-    zip_path = os.path.join(tempfile.gettempdir(), 'model.zip')
-    with open(zip_path, 'wb') as f:
-        f.write(response.content)
+    response = requests.get(model_url, stream=True)
+    tar_gz_path = os.path.join(tempfile.gettempdir(), 'model.tar.gz')
+    with open(tar_gz_path, 'wb') as f:
+        for chunk in response.iter_content(chunk_size=8192):
+            if chunk:  
+                f.write(chunk)
 
     
-    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-        zip_ref.extractall(model_dir)
-
-model_url = 'https://drive.google.com/file/d/1DIi2CgTSwz1I8bXJNVCxc9Vfo0x_uIXX/view?usp=share_link'  
+    with tarfile.open(tar_gz_path, 'r:gz') as tar:
+        tar.extractall(path=model_dir)
 
 
-download_and_extract_model(model_url)
+model_url = 'https://drive.google.com/uc?id=1DIi2CgTSwz1I8bXJNVCxc9Vfo0x_uIXX'  # replace with your actual link
+
+
+download_and_extract_model(model_url) 
 
 
 model = hub.load('model')
