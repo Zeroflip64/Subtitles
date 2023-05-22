@@ -63,6 +63,10 @@ def download_and_extract_model(model_url, model_dir='model'):
         st.write(f"File not found: {tar_gz_path}")
         return
 
+    # Print the start of the file to check if it's what you're expecting
+    with open(tar_gz_path, 'rb') as f:
+        st.write(f"Start of file: {f.read(100)}")
+    
     # Try to open the file
     try:
         with tarfile.open(tar_gz_path, 'r:gz') as tar:
