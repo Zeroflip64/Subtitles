@@ -52,7 +52,7 @@ if 'RUS' in selected_len:
   ''')
 
   st.write('')
-  df=pd.read_csv('https://github.com/Zeroflip64/Subtitles/blob/main/subs.csv')
+  df=pd.read_csv('https://raw.githubusercontent.com/Zeroflip64/Subtitles/main/subs.csv')
 
 
 
@@ -332,7 +332,7 @@ if 'ENG' in selected_len:
   ''')
 
   st.write('')
-  df=pd.read_csv('https://github.com/Zeroflip64/Subtitles/blob/main/subs.csv')
+  df=pd.read_csv('https://raw.githubusercontent.com/Zeroflip64/Subtitles/main/subs.csv')
   nlp = spacy.load("en_core_web_sm")
 
 
