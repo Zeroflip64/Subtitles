@@ -2,6 +2,7 @@ pandas
 numpy
 nltk
 spacy
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.1.0/en_core_web_sm-3.1.0.tar.gz
 pysrt
 textstat
 scikit-learn
@@ -12,4 +13,4 @@ tensorflow_text
 torch
 streamlit
 
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.1.0/en_core_web_sm-3.1.0.tar.gz
+
