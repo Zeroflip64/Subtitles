@@ -61,10 +61,7 @@ def download_and_extract_model(model_url, model_dir='model'):
                 f.write(chunk)
 
     print(f"Model downloaded to {tar_gz_path}")
-    if os.path.exists(tar_gz_path):
-        print(f"File exists at {tar_gz_path}")
-    else:
-    print(f"No file found at {tar_gz_path}")
+ 
     # Extract the model files
     with tarfile.open(tar_gz_path, 'r:gz') as tar:
         tar.extractall(path=model_dir)
