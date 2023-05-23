@@ -3,7 +3,7 @@ numpy==1.21.2
 nltk==3.6.2
 spacy
 pysrt==1.1.2
-# 'datetime' is part of the Python standard library and does not need to be installed separately
+click==8.0.3
 textstat==0.7.1
 regex==2021.8.28
 scikit-learn==0.24.2
