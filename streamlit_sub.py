@@ -18,18 +18,10 @@ from textstat import textstat
 import re
 from sklearn.preprocessing import LabelEncoder,MinMaxScaler,StandardScaler,RobustScaler
 from catboost import CatBoostClassifier
-from sklearn.model_selection import train_test_split,GridSearchCV,RandomizedSearchCV
 from sklearn.metrics import f1_score,accuracy_score
-from sklearn.ensemble import RandomForestClassifier
-import tensorflow as tf
-import tensorflow_hub as hub
-import tensorflow_text
 from textstat import flesch_kincaid_grade, gunning_fog, smog_index
-import torch
-from sklearn.decomposition import PCA
 import streamlit as st
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument
-
 nlp = spacy.load("en_core_web_sm")
 
 
