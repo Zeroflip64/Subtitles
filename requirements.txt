@@ -15,4 +15,4 @@ streamlit
 requests
 tensorflow_hub
 https://tfhub.dev/google/universal-sentence-encoder-xling-many/1
-
+gensim
