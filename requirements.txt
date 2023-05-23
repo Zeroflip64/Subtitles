@@ -1,5 +1,5 @@
-pandas
 numpy
+pandas
 nltk
 spacy
 pysrt
@@ -10,7 +10,6 @@ tensorflow
 tensorflow_hub
 tensorflow_text
 torch
-streamlit
-requests
 gensim
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.1.0/en_core_web_sm-3.1.0.tar.gz
+streamlit
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0.tar.gz
