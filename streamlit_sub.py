@@ -21,7 +21,7 @@ from catboost import CatBoostClassifier
 from sklearn.metrics import f1_score,accuracy_score
 import streamlit as st
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument
-import en_core_web_sm
+
 
 
 
