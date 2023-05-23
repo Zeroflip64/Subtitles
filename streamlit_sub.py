@@ -18,7 +18,6 @@ import re
 from sklearn.preprocessing import LabelEncoder,MinMaxScaler,StandardScaler,RobustScaler
 from catboost import CatBoostClassifier
 from sklearn.metrics import f1_score,accuracy_score
-from textstat import flesch_kincaid_grade, gunning_fog, smog_index
 import streamlit as st
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 nlp = spacy.load("en_core_web_sm")
