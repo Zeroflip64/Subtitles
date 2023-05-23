@@ -1,13 +1,12 @@
-
-import pandas as pd
-import numpy as np
 import nltk
-import random
 nltk.download('punkt')
 nltk.download('cmudict')
 nltk.download('stopwords')
 nltk.download('reuters')
 nltk.download('words')
+import pandas as pd
+import numpy as np
+import random
 import spacy
 import pysrt
 import datetime
