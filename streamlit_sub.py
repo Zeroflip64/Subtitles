@@ -43,48 +43,8 @@ import tensorflow_hub as hub
 import tempfile
 
 nlp = spacy.load("en_core_web_sm")
-
-def download_and_extract_model(model_url, model_dir='model'):
-    os.makedirs(model_dir, exist_ok=True)
-
-    response = requests.get(model_url, stream=True)
-    tar_gz_path = os.path.join(tempfile.gettempdir(), 'model.tar.gz')
-    with open(tar_gz_path, 'wb') as f:
-        for chunk in response.iter_content(chunk_size=8192):
-            if chunk:  # filter out keep-alive new chunks
-                f.write(chunk)
-                
-    st.write(f"Model downloaded to {tar_gz_path}")
-
-    # Check if the file exists and print its size
-    if os.path.isfile(tar_gz_path):
-        st.write(f"File size: {os.path.getsize(tar_gz_path)} bytes")
-    else:
-        st.write(f"File not found: {tar_gz_path}")
-        return
-
-    # Print the start of the file to check if it's what you're expecting
-    with open(tar_gz_path, 'rb') as f:
-        st.write(f"Start of file: {f.read(100)}")
-    
-    # Try to open the file
-    try:
-        with tarfile.open(tar_gz_path, 'r:gz') as tar:
-            tar.extractall(path=model_dir)
-    except tarfile.ReadError as e:
-        st.write(f"Error reading tar file: {e}")
-    except Exception as e:
-        st.write(f"Unknown error: {e}")
-
-    st.write(f"Model extracted to {model_dir}")
-
-model_url = 'https://drive.google.com/file/d/1DIi2CgTSwz1I8bXJNVCxc9Vfo0x_uIXX/view?usp=share_link' 
-
-# Download and extract the model
-download_and_extract_model(model_url)
-
-# Load the model from the downloaded files
-model = hub.load('model')
+module_url = "https://tfhub.dev/google/universal-sentence-encoder/4"
+model = hub.load(module_url)
 
 language=['RUS','ENG']
 selected_len = st.multiselect('Язык/Lsnguage ?', language)
