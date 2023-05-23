@@ -42,7 +42,7 @@ if 'RUS' in selected_len:
 
   st.write('')
 
-  df=pd.read_csv('https://github.com/Zeroflip64/Subtitles/blob/main/subs.csv')
+  df = pd.read_csv('https://github.com/Zeroflip64/Subtitles/raw/main/subs.csv')
 
 
   class Features:
