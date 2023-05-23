@@ -50,7 +50,7 @@ if 'RUS' in selected_len:
 
   st.write('')
 
-  df=pd.read_csv('/content/drive/MyDrive/учеба/мастерская 2/subs.csv')
+  df=pd.read_csv('https://github.com/Zeroflip64/Subtitles/blob/main/subs.csv')
 
 
   class Features:
@@ -315,7 +315,7 @@ if 'ENG' in selected_len:
 
   ''')
 
-  df=pd.read_csv('/content/drive/MyDrive/учеба/мастерская 2/subs.csv')
+  df=pd.read_csv('https://github.com/Zeroflip64/Subtitles/blob/main/subs.csv')
 
 
   class Features:
