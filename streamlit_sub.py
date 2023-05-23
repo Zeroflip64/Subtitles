@@ -49,7 +49,7 @@ if 'RUS' in selected_len:
       word_freqs = FreqDist(i.lower() for i in reuters.words())
       common_words = set(nltk_words.words())
       stop_words = set(stopwords.words('english'))
-      nlp = en_core_web_sm.load()
+      nlp = spacy.load('en_core_web_sm')
       
       def __init__(self, first):
           self.first = first
