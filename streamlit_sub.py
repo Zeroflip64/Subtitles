@@ -20,8 +20,7 @@ from catboost import CatBoostClassifier
 from sklearn.metrics import f1_score,accuracy_score
 import streamlit as st
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument
-import os
-os.system("python -m spacy download en_core_web_sm")
+import en_core_web_sm
 
 
 
@@ -50,7 +49,7 @@ if 'RUS' in selected_len:
       word_freqs = FreqDist(i.lower() for i in reuters.words())
       common_words = set(nltk_words.words())
       stop_words = set(stopwords.words('english'))
-      nlp = spacy.load('en_core_web_sm')
+      nlp = en_core_web_sm.load()
       
       def __init__(self, first):
           self.first = first
