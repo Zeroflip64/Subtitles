@@ -6,4 +6,5 @@ nltk==3.6.3
 catboost==1.0.0
 gensim==4.1.2
 scikit-learn==1.0.1
+textstat
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.1.0/en_core_web_sm-3.1.0.tar.gz
