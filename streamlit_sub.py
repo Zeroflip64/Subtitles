@@ -20,7 +20,7 @@ from catboost import CatBoostClassifier
 from sklearn.metrics import f1_score,accuracy_score
 import streamlit as st
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument
-nlp = spacy.load("en_core_web_sm")
+nlp = spacy.load("https://github.com/Zeroflip64/Subtitles/blob/main/en_core_web_sm-3.1.0.tar.gz")
 
 
 
