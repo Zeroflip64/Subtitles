@@ -27,7 +27,7 @@ st.write('Пожалуйста подождите модель грузитьс�
 st.write('Вам понадобяться субтитры на английском языке ,в формате "srt" / You will need English subtitles in "srt" format')
 
 
-image_url = "https://github.com/Zeroflip64/Subtitles/blob/main/nivel-engleza-ru.jpg"
+image_url = "https://rabota-md.s3.eu-central-1.amazonaws.com/blog/image/blog/nivel-engleza-ru.jpg"
 st.image(image_url, caption='Info', use_column_width=True)
 
 language=['RUS','ENG']
