@@ -23,7 +23,7 @@ import streamlit as st
 from gensim.models.doc2vec import Doc2Vec, TaggedDocument
 import en_core_web_sm
 
-st.write('Пожалуйста подождите модель грузиться./Please wait for the model to load.')
+st.write('Пожалуйста подождите модель грузиться./Please wait for the model to load')
 st.write('Вам понадобяться субтитры на английском языке ,в формате "srt" / You will need English subtitles in "srt" format')
 
 
