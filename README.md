@@ -1,4 +1,4 @@
-## [Определение сложности субтитров / Determining the cost of cars](https://github.com/Zeroflip64/Subtitles/blob/main/%D0%9C%D0%B0%D1%81%D1%82%D0%B5%D1%80%D1%81%D0%BA%D0%B0%D1%8F_2.ipynb)
+## [Определение сложности субтитров / Recognition of language complexity for understanding movie subtitles](https://github.com/Zeroflip64/Subtitles/blob/main/%D0%9C%D0%B0%D1%81%D1%82%D0%B5%D1%80%D1%81%D0%BA%D0%B0%D1%8F_2.ipynb)
 
 [Ссылка на приложение/Link to the application](https://zeroflip64-subtitles-streamlit-sub-n9wsxl.streamlit.app/)
 
