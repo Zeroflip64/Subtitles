@@ -4,6 +4,6 @@ catboost
 gensim==4.1.2
 scikit-learn
 textstat
-click==7.1.2
+click
 spacy==3.0.0
 en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0.tar.gz
